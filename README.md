@@ -18,5 +18,5 @@ Follow these steps to get the development environment running on your local mach
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/yourusername/pytube.git](https://github.com/yourusername/pytube.git)
+git clone https://github.com/fortunate-panda/Django-youtube-webapp/
 cd pytube

@@ -1,0 +1,21 @@
+{% extends 'videos/base.html' %}
+
+{% block content %}
+<div class="row">
+    {% for video in videos %}
+    <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h5 class="card-title text-truncate">{{ video.title }}</h5>
+                <p class="card-text text-muted small">Uploaded: {{ video.uploaded_at|date:"M d, Y" }}</p>
+                <a href="{% url 'watch_video' video.pk %}" class="btn btn-primary w-100">Watch Now</a>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <div class="col-12 text-center mt-5">
+        <h3 class="text-muted">No videos uploaded yet.</h3>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
